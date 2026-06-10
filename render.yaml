@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: candidatai-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GNEWS_API_KEY
+        sync: false
+      - key: PORTAL_TRANSPARENCIA_TOKEN
+        sync: false
