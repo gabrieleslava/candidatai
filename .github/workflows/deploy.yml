@@ -20,10 +20,17 @@ jobs:
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
+      - name: Build and push Docker image
+        run: |
+          gcloud auth configure-docker us-central1-docker.pkg.dev
+          docker build -t us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/cloud-run-source-deploy/candidatai-api:${{ github.sha }} ./backend
+          docker push us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/cloud-run-source-deploy/candidatai-api:${{ github.sha }}
+
       - name: Deploy to Cloud Run
-        uses: google-github-actions/deploy-cloudrun@v2
-        with:
-          service: candidatai-api
-          source: ./backend
-          region: us-central1
-          env_vars: GNEWS_API_KEY=${{ secrets.GNEWS_API_KEY }},PORTAL_TRANSPARENCIA_TOKEN=${{ secrets.PORTAL_TRANSPARENCIA_TOKEN }}
+        run: |
+          gcloud run deploy candidatai-api \
+            --image us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/cloud-run-source-deploy/candidatai-api:${{ github.sha }} \
+            --region us-central1 \
+            --platform managed \
+            --allow-unauthenticated \
+            --set-env-vars GNEWS_API_KEY=${{ secrets.GNEWS_API_KEY }},PORTAL_TRANSPARENCIA_TOKEN=${{ secrets.PORTAL_TRANSPARENCIA_TOKEN }}
