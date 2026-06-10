@@ -171,51 +171,51 @@ PROCESSOS = {
     "luiz inacio lula da silva": [
         {"tipo": "Ação penal — Quadrilhão do PT", "instancia": "STF", "status": "em_andamento",
          "data_inicio": "2023-06-15", "data_decisao": None,
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "Inquérito sobre suposto esquema de desvio em estatais entre 2003-2016."},
+         "fonte": "https://portal.stf.jus.br", "observacao": "Inquérito sobre suposto esquema de desvio em estatais entre 2003-2016."},
         {"tipo": "Ação de improbidade administrativa", "instancia": "TRF-1", "status": "arquivado",
          "data_inicio": "2016-10-20", "data_decisao": "2021-05-30",
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "Caso triplex — processos anulados pelo STF em 2021."},
+         "fonte": "https://www.cnj.jus.br", "observacao": "Caso triplex — processos anulados pelo STF em 2021."},
     ],
     "flavio bolsonaro": [
         {"tipo": "Peculato e lavagem de dinheiro", "instancia": "TJ-RJ", "status": "em_andamento",
          "data_inicio": "2020-12-18", "data_decisao": None,
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "Inquérito das rachadinhas — desvio de salários de assessores na ALERJ."},
+         "fonte": "https://www.cnj.jus.br", "observacao": "Inquérito das rachadinhas — desvio de salários de assessores na ALERJ."},
         {"tipo": "Organização criminosa", "instancia": "MP-RJ", "status": "em_andamento",
          "data_inicio": "2021-03-10", "data_decisao": None,
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "Possível envolvimento em esquema de 'rachadinha' no gabinete."},
+         "fonte": "https://www.cnj.jus.br", "observacao": "Possível envolvimento em esquema de 'rachadinha' no gabinete."},
         {"tipo": "Falsidade ideológica eleitoral", "instancia": "TRE-RJ", "status": "em_andamento",
          "data_inicio": "2022-08-05", "data_decisao": None,
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "Investigação sobre declaração de patrimônio em campanhas."},
+         "fonte": "https://www.tse.jus.br", "observacao": "Investigação sobre declaração de patrimônio em campanhas."},
         {"tipo": "Improbidade administrativa", "instancia": "TJ-RJ", "status": "arquivado",
          "data_inicio": "2019-01-15", "data_decisao": "2025-04-10",
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "Caso Queiroz — o ex-assessor devolveu valores aos cofres públicos."},
+         "fonte": "https://www.cnj.jus.br", "observacao": "Caso Queiroz — o ex-assessor devolveu valores aos cofres públicos."},
     ],
     "aecio neves": [
         {"tipo": "Corrupção passiva", "instancia": "STF", "status": "em_andamento",
          "data_inicio": "2017-05-18", "data_decisao": None,
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "Inquérito da JBS — gravação de Joesley Batista."},
+         "fonte": "https://portal.stf.jus.br", "observacao": "Inquérito da JBS — gravação de Joesley Batista."},
         {"tipo": "Obstrução de justiça", "instancia": "STF", "status": "em_andamento",
          "data_inicio": "2017-06-20", "data_decisao": None,
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "Investigação sobre tentativa de atrapalhar investigações da Lava Jato."},
+         "fonte": "https://portal.stf.jus.br", "observacao": "Investigação sobre tentativa de atrapalhar investigações da Lava Jato."},
         {"tipo": "Lavagem de dinheiro", "instancia": "TRF-3", "status": "em_andamento",
          "data_inicio": "2018-09-10", "data_decisao": None,
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "Caso Furnas — desvios em estatais mineiras."},
+         "fonte": "https://www.cnj.jus.br", "observacao": "Caso Furnas — desvios em estatais mineiras."},
     ],
     "eduardo bolsonaro": [
         {"tipo": "Declarações contra instituições democráticas", "instancia": "STF", "status": "em_andamento",
          "data_inicio": "2024-02-15", "data_decisao": None,
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "CPI das Fake News e ataques ao STF e TSE."},
+         "fonte": "https://portal.stf.jus.br", "observacao": "CPI das Fake News e ataques ao STF e TSE."},
         {"tipo": "Inquérito das fake news", "instancia": "STF", "status": "em_andamento",
          "data_inicio": "2023-07-10", "data_decisao": None,
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "Suposto envolvimento em redes de disseminação de informações falsas."},
+         "fonte": "https://portal.stf.jus.br", "observacao": "Suposto envolvimento em redes de disseminação de informações falsas."},
     ],
     "guilherme boulos": [
         {"tipo": "Invasão de propriedade — MTST", "instancia": "TJ-SP", "status": "arquivado",
          "data_inicio": "2018-06-10", "data_decisao": "2022-11-05",
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "Ocupação de terreno abandonado na Zona Sul de SP em 2018."},
+         "fonte": "https://www.cnj.jus.br", "observacao": "Ocupação de terreno abandonado na Zona Sul de SP em 2018."},
         {"tipo": "Ação de despejo coletivo", "instancia": "TJ-SP", "status": "em_andamento",
          "data_inicio": "2023-03-20", "data_decisao": None,
-         "fonte": "https://datajud.cnj.jus.br/", "observacao": "Processo relacionado à ocupação de prédio abandonado no centro de SP."},
+         "fonte": "https://www.cnj.jus.br", "observacao": "Processo relacionado à ocupação de prédio abandonado no centro de SP."},
     ],
 }
 
@@ -248,26 +248,25 @@ def seed_data():
                      p["data_inicio"], p.get("data_decisao"), p["fonte"], p.get("observacao"))
                 )
 
-            # Matérias (genéricas)
+            # Matérias — link para Google Notícias
             if c["indicadores"]["materias_12m"] > 0:
-                for i in range(c["indicadores"]["materias_12m"]):
-                    cursor.execute(
-                        """INSERT INTO secao_materias (candidato_id, titulo, veiculo, data, url, fonte_api)
-                           VALUES (?, ?, ?, ?, ?, ?)""",
-                        (candidato_id, f"{c['nome']} comenta sobre propostas para 2026" if i == 0
-                         else f"Entrevista: {c['nome']} fala sobre {['saúde', 'educação', 'segurança', 'economia', 'infraestrutura'][i % 5]}",
-                         ["Folha de S.Paulo", "O Globo", "Estadão", "UOL", "CNN Brasil"][i % 5],
-                         f"2026-0{((i % 6) + 1):02d}-{((i % 28) + 1):02d}",
-                         f"https://exemplo.com/materia/{candidato_id}_{i}",
-                         "GNews API")
-                    )
+                cursor.execute(
+                    """INSERT INTO secao_materias (candidato_id, titulo, veiculo, data, url, fonte_api)
+                       VALUES (?, ?, ?, ?, ?, ?)""",
+                    (candidato_id,
+                     f"{c['nome']}: busque por notícias recentes",
+                     "🔍 Pesquise em portais de notícia",
+                     "2026-06-10",
+                     f"https://www.google.com/search?q={c['nome'].replace(' ', '+')}+eleições+2026&tbm=nws",
+                     "Google Notícias")
+                )
 
             # Gastos de campanha
             total_gasto = c["indicadores"]["patrimonio_declarado"] // 3
             cursor.execute(
                 """INSERT INTO secao_gastos_campanha (candidato_id, total_declarado, fonte)
                    VALUES (?, ?, ?)""",
-                (candidato_id, total_gasto, "https://dadosabertos.tse.jus.br/prestacao-contas/2026")
+                (candidato_id, total_gasto, "https://divulgacandcontas.tse.jus.br")
             )
             gasto_id = cursor.lastrowid
 
@@ -281,17 +280,17 @@ def seed_data():
                      f"Empresa {'ABC' if d_idx == 0 else 'Construtora XYZ' if d_idx == 1 else 'AgroBrasil Ltda'}",
                      total_gasto // (doadores_count + 1) if doadores_count > 0 else total_gasto // 3,
                      f"00.000.000/0001-{d_idx:02d}" if d_idx < doadores_count else None,
-                     "https://dadosabertos.tse.jus.br/prestacao-contas/2026")
+                     "https://divulgacandcontas.tse.jus.br")
                 )
 
             # Bens
             bens_data = [
                 ("Apartamento em São Paulo", c["indicadores"]["patrimonio_declarado"] // 2, "Imóvel",
-                 "https://dadosabertos.tse.jus.br/divulgacand/2026"),
+                 "https://divulgacandcontas.tse.jus.br"),
                 ("Veículo Toyota Corolla 2024", 180000, "Veículo",
-                  "https://dadosabertos.tse.jus.br/divulgacand/2026"),
+                  "https://divulgacandcontas.tse.jus.br"),
                 ("Aplicações financeiras", c["indicadores"]["patrimonio_declarado"] // 4, "Financeiro",
-                 "https://dadosabertos.tse.jus.br/divulgacand/2026"),
+                 "https://divulgacandcontas.tse.jus.br"),
             ]
             for bem in bens_data:
                 cursor.execute(
@@ -309,7 +308,7 @@ def seed_data():
                     (candidato_id, c["indicadores"]["presenca_legislativa_percent"],
                      max(1, c["indicadores"]["materias_12m"] // 2),
                      max(1, c["indicadores"]["materias_12m"]),
-                     "https://dadosabertos.camara.leg.br/")
+                     "https://dadosabertos.camara.leg.br")
                 )
 
             # Contratos (só para quem tem baixa presença legislativa)
@@ -325,7 +324,7 @@ def seed_data():
                          500000 * (cont_idx + 1),
                          f"Prefeitura de {c['estado']}",
                          f"2026-0{cont_idx + 1}-15",
-                         "https://portaldatransparencia.gov.br/")
+                         "https://portaldatransparencia.gov.br")
                     )
 
         except Exception as e:
