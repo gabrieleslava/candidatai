@@ -1,0 +1,16 @@
+# Backend
+backend/.env
+backend/candidatai.db
+backend/candidatai.db-shm
+backend/candidatai.db-wal
+backend/__pycache__/
+backend/*.pyc
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.firebase/
+
+# OS
+.DS_Store
+__pycache__/
