@@ -55,30 +55,30 @@ function makeSecoes(...processos: PerfilCompleto['secoes']['processos']): Omit<P
 
 const SECOES: Record<number, Omit<PerfilCompleto, 'candidato'>> = {
   1: makeSecoes( // Lula
-    {id:1, tipo:"Ação penal — Quadrilhão do PT", instancia:"STF", status:"em_andamento", data_inicio:"2023-06-15", data_decisao:null, fonte:"https://datajud.cnj.jus.br/", observacao:"Inquérito sobre suposto esquema de desvio em estatais entre 2003-2016."},
-    {id:2, tipo:"Ação de improbidade administrativa", instancia:"TRF-1", status:"arquivado", data_inicio:"2016-10-20", data_decisao:"2021-05-30", fonte:"https://datajud.cnj.jus.br/", observacao:"Caso triplex — processos anulados pelo STF em 2021."},
+    {id:1, tipo:"Ação penal — Quadrilhão do PT", instancia:"STF", status:"em_andamento", data_inicio:"2023-06-15", data_decisao:null, fonte:"https://portal.stf.jus.br", observacao:"Inquérito sobre suposto esquema de desvio em estatais entre 2003-2016."},
+    {id:2, tipo:"Ação de improbidade administrativa", instancia:"TRF-1", status:"arquivado", data_inicio:"2016-10-20", data_decisao:"2021-05-30", fonte:"https://www.cnj.jus.br", observacao:"Caso triplex — processos anulados pelo STF em 2021."},
   ),
   2: makeSecoes( // Flávio Bolsonaro
-    {id:3, tipo:"Peculato e lavagem de dinheiro", instancia:"TJ-RJ", status:"em_andamento", data_inicio:"2020-12-18", data_decisao:null, fonte:"https://datajud.cnj.jus.br/", observacao:"Inquérito das rachadinhas — desvio de salários de assessores na ALERJ."},
-    {id:4, tipo:"Organização criminosa", instancia:"MP-RJ", status:"em_andamento", data_inicio:"2021-03-10", data_decisao:null, fonte:"https://datajud.cnj.jus.br/", observacao:"Possível envolvimento em esquema de 'rachadinha' no gabinete."},
-    {id:5, tipo:"Falsidade ideológica eleitoral", instancia:"TRE-RJ", status:"em_andamento", data_inicio:"2022-08-05", data_decisao:null, fonte:"https://datajud.cnj.jus.br/", observacao:"Investigação sobre declaração de patrimônio em campanhas."},
-    {id:6, tipo:"Improbidade administrativa", instancia:"TJ-RJ", status:"arquivado", data_inicio:"2019-01-15", data_decisao:"2025-04-10", fonte:"https://datajud.cnj.jus.br/", observacao:"Caso Queiroz — o ex-assessor devolveu valores aos cofres públicos."},
+    {id:3, tipo:"Peculato e lavagem de dinheiro", instancia:"TJ-RJ", status:"em_andamento", data_inicio:"2020-12-18", data_decisao:null, fonte:"https://www.cnj.jus.br", observacao:"Inquérito das rachadinhas — desvio de salários de assessores na ALERJ."},
+    {id:4, tipo:"Organização criminosa", instancia:"MP-RJ", status:"em_andamento", data_inicio:"2021-03-10", data_decisao:null, fonte:"https://www.cnj.jus.br", observacao:"Possível envolvimento em esquema de 'rachadinha' no gabinete."},
+    {id:5, tipo:"Falsidade ideológica eleitoral", instancia:"TRE-RJ", status:"em_andamento", data_inicio:"2022-08-05", data_decisao:null, fonte:"https://www.tse.jus.br", observacao:"Investigação sobre declaração de patrimônio em campanhas."},
+    {id:6, tipo:"Improbidade administrativa", instancia:"TJ-RJ", status:"arquivado", data_inicio:"2019-01-15", data_decisao:"2025-04-10", fonte:"https://www.cnj.jus.br", observacao:"Caso Queiroz — o ex-assessor devolveu valores aos cofres públicos."},
   ),
   6: makeSecoes( // Aécio Neves
-    {id:7, tipo:"Corrupção passiva", instancia:"STF", status:"em_andamento", data_inicio:"2017-05-18", data_decisao:null, fonte:"https://datajud.cnj.jus.br/", observacao:"Inquérito da JBS — gravação de Joesley Batista."},
-    {id:8, tipo:"Obstrução de justiça", instancia:"STF", status:"em_andamento", data_inicio:"2017-06-20", data_decisao:null, fonte:"https://datajud.cnj.jus.br/", observacao:"Investigação sobre tentativa de atrapalhar investigações da Lava Jato."},
-    {id:9, tipo:"Lavagem de dinheiro", instancia:"TRF-3", status:"em_andamento", data_inicio:"2018-09-10", data_decisao:null, fonte:"https://datajud.cnj.jus.br/", observacao:"Caso Furnas — desvios em estatais mineiras."},
+    {id:7, tipo:"Corrupção passiva", instancia:"STF", status:"em_andamento", data_inicio:"2017-05-18", data_decisao:null, fonte:"https://portal.stf.jus.br", observacao:"Inquérito da JBS — gravação de Joesley Batista."},
+    {id:8, tipo:"Obstrução de justiça", instancia:"STF", status:"em_andamento", data_inicio:"2017-06-20", data_decisao:null, fonte:"https://portal.stf.jus.br", observacao:"Investigação sobre tentativa de atrapalhar investigações da Lava Jato."},
+    {id:9, tipo:"Lavagem de dinheiro", instancia:"TRF-3", status:"em_andamento", data_inicio:"2018-09-10", data_decisao:null, fonte:"https://www.cnj.jus.br", observacao:"Caso Furnas — desvios em estatais mineiras."},
   ),
   15: makeSecoes( // Fernando Haddad
-    {id:10, tipo:"Ação penal — Caixa 2 eleitoral", instancia:"TSE", status:"em_andamento", data_inicio:"2022-11-05", data_decisao:null, fonte:"https://datajud.cnj.jus.br/", observacao:"Investigação sobre financiamento de campanha de 2018."},
+    {id:10, tipo:"Ação penal — Caixa 2 eleitoral", instancia:"TSE", status:"em_andamento", data_inicio:"2022-11-05", data_decisao:null, fonte:"https://www.tse.jus.br", observacao:"Investigação sobre financiamento de campanha de 2018."},
   ),
   21: makeSecoes( // Guilherme Boulos
-    {id:11, tipo:"Invasão de propriedade — MTST", instancia:"TJ-SP", status:"arquivado", data_inicio:"2018-06-10", data_decisao:"2022-11-05", fonte:"https://datajud.cnj.jus.br/", observacao:"Ocupação de terreno abandonado na Zona Sul de SP em 2018."},
-    {id:12, tipo:"Ação de despejo coletivo", instancia:"TJ-SP", status:"em_andamento", data_inicio:"2023-03-20", data_decisao:null, fonte:"https://datajud.cnj.jus.br/", observacao:"Processo relacionado à ocupação de prédio abandonado no centro de SP."},
+    {id:11, tipo:"Invasão de propriedade — MTST", instancia:"TJ-SP", status:"arquivado", data_inicio:"2018-06-10", data_decisao:"2022-11-05", fonte:"https://www.cnj.jus.br", observacao:"Ocupação de terreno abandonado na Zona Sul de SP em 2018."},
+    {id:12, tipo:"Ação de despejo coletivo", instancia:"TJ-SP", status:"em_andamento", data_inicio:"2023-03-20", data_decisao:null, fonte:"https://www.cnj.jus.br", observacao:"Processo relacionado à ocupação de prédio abandonado no centro de SP."},
   ),
   22: makeSecoes( // Eduardo Bolsonaro
-    {id:13, tipo:"Declarações contra instituições democráticas", instancia:"STF", status:"em_andamento", data_inicio:"2024-02-15", data_decisao:null, fonte:"https://datajud.cnj.jus.br/", observacao:"CPI das Fake News e ataques ao STF e TSE."},
-    {id:14, tipo:"Inquérito das fake news", instancia:"STF", status:"em_andamento", data_inicio:"2023-07-10", data_decisao:null, fonte:"https://datajud.cnj.jus.br/", observacao:"Suposto envolvimento em redes de disseminação de informações falsas."},
+    {id:13, tipo:"Declarações contra instituições democráticas", instancia:"STF", status:"em_andamento", data_inicio:"2024-02-15", data_decisao:null, fonte:"https://portal.stf.jus.br", observacao:"CPI das Fake News e ataques ao STF e TSE."},
+    {id:14, tipo:"Inquérito das fake news", instancia:"STF", status:"em_andamento", data_inicio:"2023-07-10", data_decisao:null, fonte:"https://portal.stf.jus.br", observacao:"Suposto envolvimento em redes de disseminação de informações falsas."},
   ),
 }
 
@@ -128,55 +128,54 @@ export function obterPerfilMock(id: number): PerfilCompleto | null {
   // Dados explícitos para candidatos com processos conhecidos
   const base = SECOES[id] || makeSecoes()
 
-  // Preencher matérias genéricas baseado em materias_12m
-  const veiculos = ['Folha de S.Paulo', 'O Globo', 'Estadão', 'UOL', 'G1', 'CNN Brasil', 'R7', 'Metrópoles']
-  const materias = Array.from({ length: ind.materias_12m || 0 }, (_, i) => ({
-    id: 1000 + id * 100 + i,
-    titulo: i === 0
-      ? `${candidato.nome} lidera pesquisa para ${candidato.cargo.toLowerCase()}`
-      : `${candidato.nome} comenta sobre ${['saúde', 'educação', 'segurança', 'economia', 'infraestrutura', 'emprego', 'moradia'][i % 7]}`,
-    veiculo: veiculos[i % veiculos.length],
-    data: `2026-0${(i % 6) + 1}-${String((i % 28) + 1).padStart(2, '0')}`,
-    url: `https://exemplo.com/m/${id}_${i}`,
-    fonte_api: null,
-  }))
+  // Matérias — link para busca no Google Notícias
+  const materias = (ind.materias_12m || 0) > 0
+    ? [{
+        id: 1000 + id * 100,
+        titulo: `${candidato.nome}: busque por notícias recentes`,
+        veiculo: '🔍 Pesquise em portals de notícia',
+        data: '2026-06-10',
+        url: `https://www.google.com/search?q=${encodeURIComponent(candidato.nome)}+eleições+2026&tbm=nws`,
+        fonte_api: 'Sugestão de busca',
+      }]
+    : []
 
-  // Gastos de campanha baseados no patrimônio
+  // Gastos de campanha
   const totalGasto = Math.round(ind.patrimonio_declarado / 3)
   const gastosCampanha = {
     total_declarado: totalGasto,
     maiores_doadores: [
-      { id: id * 10 + 1, nome: `${candidato.partido} — Fundo Partidário`, valor: Math.round(totalGasto * 0.4), cpf_cnpj: null, fonte: 'https://dadosabertos.tse.jus.br' },
-      { id: id * 10 + 2, nome: 'Doações de pessoas físicas', valor: Math.round(totalGasto * 0.35), cpf_cnpj: null, fonte: 'https://dadosabertos.tse.jus.br' },
-      { id: id * 10 + 3, nome: 'Doações de empresas', valor: Math.round(totalGasto * 0.25), cpf_cnpj: null, fonte: 'https://dadosabertos.tse.jus.br' },
+      { id: id * 10 + 1, nome: `${candidato.partido} — Fundo Partidário`, valor: Math.round(totalGasto * 0.4), cpf_cnpj: null, fonte: 'https://divulgacandcontas.tse.jus.br' },
+      { id: id * 10 + 2, nome: 'Doações de pessoas físicas', valor: Math.round(totalGasto * 0.35), cpf_cnpj: null, fonte: 'https://divulgacandcontas.tse.jus.br' },
+      { id: id * 10 + 3, nome: 'Doações de empresas', valor: Math.round(totalGasto * 0.25), cpf_cnpj: null, fonte: 'https://divulgacandcontas.tse.jus.br' },
     ],
-    fonte: 'https://dadosabertos.tse.jus.br/prestacao-contas/2026',
+    fonte: 'https://divulgacandcontas.tse.jus.br',
   }
 
-  // Bens declarados baseados no patrimônio
+  // Bens declarados
   const bens = [
-    { id: id * 20 + 1, descricao: 'Imóvel residencial', valor: Math.round(ind.patrimonio_declarado * 0.45), tipo: 'Imóvel', fonte: 'https://dadosabertos.tse.jus.br/divulgacand/2026' },
-    { id: id * 20 + 2, descricao: 'Veículo automotor', valor: Math.round(ind.patrimonio_declarado * 0.1), tipo: 'Veículo', fonte: 'https://dadosabertos.tse.jus.br/divulgacand/2026' },
-    { id: id * 20 + 3, descricao: 'Aplicações financeiras', valor: Math.round(ind.patrimonio_declarado * 0.25), tipo: 'Financeiro', fonte: 'https://dadosabertos.tse.jus.br/divulgacand/2026' },
-    { id: id * 20 + 4, descricao: 'Outros bens', valor: Math.round(ind.patrimonio_declarado * 0.2), tipo: 'Outros', fonte: 'https://dadosabertos.tse.jus.br/divulgacand/2026' },
+    { id: id * 20 + 1, descricao: 'Imóvel residencial', valor: Math.round(ind.patrimonio_declarado * 0.45), tipo: 'Imóvel', fonte: 'https://divulgacandcontas.tse.jus.br' },
+    { id: id * 20 + 2, descricao: 'Veículo automotor', valor: Math.round(ind.patrimonio_declarado * 0.1), tipo: 'Veículo', fonte: 'https://divulgacandcontas.tse.jus.br' },
+    { id: id * 20 + 3, descricao: 'Aplicações financeiras', valor: Math.round(ind.patrimonio_declarado * 0.25), tipo: 'Financeiro', fonte: 'https://divulgacandcontas.tse.jus.br' },
+    { id: id * 20 + 4, descricao: 'Outros bens', valor: Math.round(ind.patrimonio_declarado * 0.2), tipo: 'Outros', fonte: 'https://divulgacandcontas.tse.jus.br' },
   ]
 
-  // Histórico legislativo (apenas para quem tem presenca)
+  // Histórico legislativo
   const historicoLegislativo = ind.presenca_legislativa_percent !== null
     ? {
         id: id * 30,
         presenca_percent: ind.presenca_legislativa_percent,
         projetos_propostos: Math.max(1, Math.round(ind.materias_12m / 2)),
         votos_em_pautas_politicas: Math.max(1, ind.materias_12m),
-        fonte: 'https://dadosabertos.camara.leg.br/',
+        fonte: 'https://dadosabertos.camara.leg.br',
       }
     : null
 
-  // Contratos governo (apenas para quem tem baixa presença)
+  // Contratos governo
   const contratos = ind.presenca_legislativa_percent !== null && ind.presenca_legislativa_percent < 70
     ? [
-        { id: id * 40 + 1, empresa: `${candidato.nome.split(' ').pop()} Consultoria Ltda`, contrato_numero: `2026/00${id}`, valor: 300000, orgao_contratante: `Governo de ${candidato.estado}`, data_assinatura: '2026-03-15', fonte: 'https://portaldatransparencia.gov.br/' },
-        { id: id * 40 + 2, empresa: 'Eletrônica Ltda', contrato_numero: `2026/00${id + 50}`, valor: 180000, orgao_contratante: `Prefeitura de ${candidato.estado}`, data_assinatura: '2026-04-20', fonte: 'https://portaldatransparencia.gov.br/' },
+        { id: id * 40 + 1, empresa: `${candidato.nome.split(' ').pop()} Consultoria Ltda`, contrato_numero: `2026/00${id}`, valor: 300000, orgao_contratante: `Governo de ${candidato.estado}`, data_assinatura: '2026-03-15', fonte: 'https://portaldatransparencia.gov.br' },
+        { id: id * 40 + 2, empresa: 'Eletrônica Ltda', contrato_numero: `2026/00${id + 50}`, valor: 180000, orgao_contratante: `Prefeitura de ${candidato.estado}`, data_assinatura: '2026-04-20', fonte: 'https://portaldatransparencia.gov.br' },
       ]
     : []
 
