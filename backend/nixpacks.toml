@@ -1,0 +1,5 @@
+runtime: python3
+build:
+  command: pip install -r requirements.txt
+run:
+  command: python -m uvicorn main:app --host 0.0.0.0 --port $PORT
