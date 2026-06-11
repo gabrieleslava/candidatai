@@ -29,8 +29,11 @@ export default function Ranking() {
 
   const [selecionados, setSelecionados] = useState<number[]>([])
 
+  const [erro, setErro] = useState('')
+
   const carregar = (overrides?: Record<string, string | boolean>) => {
     setLoading(true)
+    setErro('')
     listarCandidatos({
       cargo: (cargo || overrides?.cargo) as string | undefined,
       estado: (estado || overrides?.estado) as string | undefined,
@@ -39,10 +42,13 @@ export default function Ranking() {
       tem_condenacao: (temCondenacao || overrides?.tem_condenacao) as boolean | undefined,
       tem_doacao_investigada: (temDoacaoInv || overrides?.tem_doacao_investigada) as boolean | undefined,
       baixa_presenca: (baixaPresenca || overrides?.baixa_presenca) as boolean | undefined,
-    }).then(setCandidatos).finally(() => setLoading(false))
+    }).then(setCandidatos).catch(e => setErro(e.message)).finally(() => setLoading(false))
   }
 
-  useEffect(() => { opcoesFiltros().then(opts => { setCargos(opts.cargos); setEstados(opts.estados) }); carregar() }, [])
+  useEffect(() => {
+    opcoesFiltros().then(opts => { setCargos(opts.cargos); setEstados(opts.estados) }).catch(() => {});
+    carregar()
+  }, [])
 
   const toggleSelecionado = (id: number) => {
     setSelecionados(prev => prev.includes(id) ? prev.filter(x => x !== id) : prev.length < 4 ? [...prev, id] : prev)
@@ -105,7 +111,15 @@ export default function Ranking() {
 
       {loading && <div className="flex justify-center py-16"><div className="animate-spin rounded-full h-8 w-8 border-[3px] border-brand-200 border-t-brand-600" /></div>}
 
-      {!loading && (
+      {erro && !loading && (
+        <div className="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+          <p className="text-red-700 font-semibold">Erro ao carregar dados</p>
+          <p className="text-red-500 text-sm mt-1">{erro}</p>
+          <button onClick={() => carregar()} className="mt-3 px-4 py-2 bg-red-600 text-white rounded-lg text-sm">Tentar novamente</button>
+        </div>
+      )}
+
+      {!loading && !erro && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {candidatos.map((c, idx) => (
             <div key={c.id} onClick={() => toggleSelecionado(c.id)}
