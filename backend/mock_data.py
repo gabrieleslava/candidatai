@@ -263,10 +263,11 @@ def seed_data():
 
             # Gastos de campanha
             total_gasto = c["indicadores"]["patrimonio_declarado"] // 3
+            tse_busca = f"https://divulgacandcontas.tse.jus.br/divulga/#/pesquisa?nome={c['nome'].replace(' ', '%20')}"
             cursor.execute(
                 """INSERT INTO secao_gastos_campanha (candidato_id, total_declarado, fonte)
                    VALUES (?, ?, ?)""",
-                (candidato_id, total_gasto, "https://divulgacandcontas.tse.jus.br")
+                (candidato_id, total_gasto, tse_busca)
             )
             gasto_id = cursor.lastrowid
 
@@ -280,17 +281,14 @@ def seed_data():
                      f"Empresa {'ABC' if d_idx == 0 else 'Construtora XYZ' if d_idx == 1 else 'AgroBrasil Ltda'}",
                      total_gasto // (doadores_count + 1) if doadores_count > 0 else total_gasto // 3,
                      f"00.000.000/0001-{d_idx:02d}" if d_idx < doadores_count else None,
-                     "https://divulgacandcontas.tse.jus.br")
+                     tse_busca)
                 )
 
             # Bens
             bens_data = [
-                ("Apartamento em São Paulo", c["indicadores"]["patrimonio_declarado"] // 2, "Imóvel",
-                 "https://divulgacandcontas.tse.jus.br"),
-                ("Veículo Toyota Corolla 2024", 180000, "Veículo",
-                  "https://divulgacandcontas.tse.jus.br"),
-                ("Aplicações financeiras", c["indicadores"]["patrimonio_declarado"] // 4, "Financeiro",
-                 "https://divulgacandcontas.tse.jus.br"),
+                ("Apartamento em São Paulo", c["indicadores"]["patrimonio_declarado"] // 2, "Imóvel", tse_busca),
+                ("Veículo Toyota Corolla 2024", 180000, "Veículo", tse_busca),
+                ("Aplicações financeiras", c["indicadores"]["patrimonio_declarado"] // 4, "Financeiro", tse_busca),
             ]
             for bem in bens_data:
                 cursor.execute(

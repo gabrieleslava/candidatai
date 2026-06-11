@@ -142,22 +142,23 @@ export function obterPerfilMock(id: number): PerfilCompleto | null {
 
   // Gastos de campanha
   const totalGasto = Math.round(ind.patrimonio_declarado / 3)
+  const tseSearch = `https://divulgacandcontas.tse.jus.br/divulga/#/pesquisa?nome=${encodeURIComponent(candidato.nome)}`
   const gastosCampanha = {
     total_declarado: totalGasto,
     maiores_doadores: [
-      { id: id * 10 + 1, nome: `${candidato.partido} — Fundo Partidário`, valor: Math.round(totalGasto * 0.4), cpf_cnpj: null, fonte: 'https://divulgacandcontas.tse.jus.br' },
-      { id: id * 10 + 2, nome: 'Doações de pessoas físicas', valor: Math.round(totalGasto * 0.35), cpf_cnpj: null, fonte: 'https://divulgacandcontas.tse.jus.br' },
-      { id: id * 10 + 3, nome: 'Doações de empresas', valor: Math.round(totalGasto * 0.25), cpf_cnpj: null, fonte: 'https://divulgacandcontas.tse.jus.br' },
+      { id: id * 10 + 1, nome: `${candidato.partido} — Fundo Partidário`, valor: Math.round(totalGasto * 0.4), cpf_cnpj: null, fonte: tseSearch },
+      { id: id * 10 + 2, nome: 'Doações de pessoas físicas', valor: Math.round(totalGasto * 0.35), cpf_cnpj: null, fonte: tseSearch },
+      { id: id * 10 + 3, nome: 'Doações de empresas', valor: Math.round(totalGasto * 0.25), cpf_cnpj: null, fonte: tseSearch },
     ],
-    fonte: 'https://divulgacandcontas.tse.jus.br',
+    fonte: tseSearch,
   }
 
   // Bens declarados
   const bens = [
-    { id: id * 20 + 1, descricao: 'Imóvel residencial', valor: Math.round(ind.patrimonio_declarado * 0.45), tipo: 'Imóvel', fonte: 'https://divulgacandcontas.tse.jus.br' },
-    { id: id * 20 + 2, descricao: 'Veículo automotor', valor: Math.round(ind.patrimonio_declarado * 0.1), tipo: 'Veículo', fonte: 'https://divulgacandcontas.tse.jus.br' },
-    { id: id * 20 + 3, descricao: 'Aplicações financeiras', valor: Math.round(ind.patrimonio_declarado * 0.25), tipo: 'Financeiro', fonte: 'https://divulgacandcontas.tse.jus.br' },
-    { id: id * 20 + 4, descricao: 'Outros bens', valor: Math.round(ind.patrimonio_declarado * 0.2), tipo: 'Outros', fonte: 'https://divulgacandcontas.tse.jus.br' },
+    { id: id * 20 + 1, descricao: 'Imóvel residencial', valor: Math.round(ind.patrimonio_declarado * 0.45), tipo: 'Imóvel', fonte: tseSearch },
+    { id: id * 20 + 2, descricao: 'Veículo automotor', valor: Math.round(ind.patrimonio_declarado * 0.1), tipo: 'Veículo', fonte: tseSearch },
+    { id: id * 20 + 3, descricao: 'Aplicações financeiras', valor: Math.round(ind.patrimonio_declarado * 0.25), tipo: 'Financeiro', fonte: tseSearch },
+    { id: id * 20 + 4, descricao: 'Outros bens', valor: Math.round(ind.patrimonio_declarado * 0.2), tipo: 'Outros', fonte: tseSearch },
   ]
 
   // Histórico legislativo
